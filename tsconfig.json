@@ -6,7 +6,9 @@
     "outDir": "dist",
     "strict": true,
     "esModuleInterop": true,
-    "types": ["node"]
+    "types": ["node"],
+    "skipLibCheck": true
   },
-  "exclude": ["prisma.config.ts", "node_modules"]
+  "include": ["src"],
+  "exclude": ["node_modules", "prisma.config.ts", "dist"]
 }
