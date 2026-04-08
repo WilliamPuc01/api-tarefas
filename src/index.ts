@@ -3,9 +3,11 @@ import express, { Request, Response, NextFunction } from 'express'
 import tarefasRouter from './routes/tarefas.router'
 import authRouter from './routes/auth.router'
 import { autenticar } from './middlewares/autenticar'
+import cors from 'cors'
 
 const app = express()
 app.use(express.json())
+app.use(cors())
 
 app.get('/', (req: Request, res: Response) => {
   res.json({ mensagem: "API de Tarefas!" })
